@@ -34,7 +34,7 @@ Summary:		A free, portable Mac 68k emulator
 Name:			%{name}
 Version:		%{version}
 Release:		%{release}
-Requires(post,preun)			update-alternatives
+Requires(post,preun):			update-alternatives
 Source0:		http://iphcip1.physik.uni-mainz.de/~cbauer/BasiliskII-%{version}-%{snapshot}.tar.bz2
 Source1:		BasiliskII.16.png.bz2
 Source2:		BasiliskII.32.png.bz2
