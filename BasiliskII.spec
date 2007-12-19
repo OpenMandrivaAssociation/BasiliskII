@@ -185,15 +185,15 @@ bzcat %{SOURCE2} > $RPM_BUILD_ROOT%{_iconsdir}/%{name}.png
 bzcat %{SOURCE3} > $RPM_BUILD_ROOT%{_liconsdir}/%{name}.png
 
 # mdk menu
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat > $RPM_BUILD_ROOT%{_menudir}/%{name} << EOF
-?package(%{name}):\
-    command="%{_bindir}/%{name}"\
-    title="Basilisk II"\
-    section="More Applications/Emulators"\
-    icon="%{name}.png"\
-    longtitle="A Macintosh Emulator"\
-    needs="x11"
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
+cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
+[Desktop Entry]
+Type=Application
+Exec=%{_bindir}/%{name}    
+Name=Basilisk II    
+Categories=Emulator;    
+Icon=%{name}    
+Comment=A Macintosh Emulator    
 EOF
 
 %clean
@@ -261,7 +261,7 @@ fi
 %{_iconsdir}/%{name}.png*
 %{_liconsdir}/%{name}.png*
 # mdk menus
-%{_menudir}/%{name}
+%{_datadir}/applications/mandriva-%{name}.desktop
 
 %if %{sheepnet}
 %files sheepnet
