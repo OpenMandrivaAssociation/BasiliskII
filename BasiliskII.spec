@@ -46,6 +46,7 @@ Patch2:			BasiliskII-1.0-sheepnet.patch.bz2
 License:		GPL
 URL:			http://www.gibix.net/projects/basilisk2/
 Group:			Emulators
+BuildRoot:		%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:		gcc-c++
 BuildRequires:		libesound-devel libgtk+2.0-devel
 Obsoletes:		BasiliskII-jit
