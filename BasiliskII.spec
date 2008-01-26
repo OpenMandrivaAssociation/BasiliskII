@@ -1,7 +1,7 @@
 %define	name		BasiliskII
 %define version		1.0
 %define snapshot	20060501
-%define release		%mkrel 0.%{snapshot}.3
+%define release		%mkrel 0.%{snapshot}.4
 %define mon_version	3.0
 %define mon_snapshot	20030206
 %define jit_arches	%{ix86} x86_64
@@ -43,7 +43,7 @@ Source4:		cxmon-%{mon_version}-%{mon_snapshot}.tar.bz2
 Source5:		kernel-version.sh
 Patch1:			BasiliskII-jit-debug-hwbases.patch.bz2
 Patch2:			BasiliskII-1.0-sheepnet.patch.bz2
-License:		GPL
+License:		GPLv2+
 URL:			http://www.gibix.net/projects/basilisk2/
 Group:			Emulators
 BuildRoot:		%{_tmppath}/%{name}-%{version}-buildroot
@@ -190,11 +190,11 @@ mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
 cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
 [Desktop Entry]
 Type=Application
-Exec=%{_bindir}/%{name}    
-Name=Basilisk II    
-Categories=Emulator;    
+Exec=%{_bindir}/%{name}
+Name=Basilisk II
+Categories=Emulator;
 Icon=%{name}    
-Comment=A Macintosh Emulator    
+Comment=A Macintosh Emulator
 EOF
 
 %clean
