@@ -201,12 +201,16 @@ EOF
 rm -rf $RPM_BUILD_ROOT
 
 %post
+%if %mdkversion < 200900
 %update_menus
+%endif
 update-alternatives --install %{_bindir}/basilisk2 basilisk2 %{_bindir}/%{name} 10 \
 	--slave %{_mandir}/man1/basilisk2.1.bz2 basilisk2.1.bz2 %{_mandir}/man1/%{name}.1.bz2
 
 %postun
+%if %mdkversion < 200900
 %clean_menus
+%endif
 [ $1 = 0 ] || exit 0
 update-alternatives --remove basilisk2 %{_bindir}/%{name}
 
