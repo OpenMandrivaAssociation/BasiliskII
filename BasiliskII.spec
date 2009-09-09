@@ -1,7 +1,7 @@
 %define	name		BasiliskII
 %define version		1.0
 %define snapshot	20060501
-%define release		%mkrel 0.%{snapshot}.4
+%define release		%mkrel 0.%{snapshot}.5
 %define mon_version	3.0
 %define mon_snapshot	20030206
 %define jit_arches	%{ix86} x86_64
