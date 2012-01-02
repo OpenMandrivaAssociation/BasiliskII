@@ -48,7 +48,7 @@ URL:			http://www.gibix.net/projects/basilisk2/
 Group:			Emulators
 BuildRoot:		%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:		gcc-c++
-BuildRequires:		esd-devel libgtk+2.0-devel
+BuildRequires:		esound-devel libgtk+2.0-devel
 Obsoletes:		BasiliskII-jit
 Provides:		BasiliskII-jit
 
