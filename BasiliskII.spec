@@ -125,7 +125,6 @@ perl -pi -e 's/^The XFree86 Project, Inc$/%{mdk_distro}/' src/Unix/keycodes
 %if %{JITDebug}
 perl -pi -e "s|([ \t]*mon_srcdir)=.*|\1=../../cxmon-%{mon_version}/src|" ./src/Unix/configure ./src/Unix/configure.in
 %endif
-%patch2 -p1 -b .sheepnet
 
 %build
 cd ./src/Unix
