@@ -1,3 +1,4 @@
+%define Werror_cflags	%nil
 %define	name		BasiliskII
 %define version		1.0
 %define snapshot	20060501
