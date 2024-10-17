@@ -45,7 +45,7 @@ Source5:		kernel-version.sh
 Patch1:			BasiliskII-jit-debug-hwbases.patch.bz2
 Patch2:			BasiliskII-1.0-sheepnet.patch.bz2
 License:		GPLv2+
-URL:			http://www.gibix.net/projects/basilisk2/
+URL:			https://www.gibix.net/projects/basilisk2/
 Group:			Emulators
 BuildRoot:		%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:		gcc-c++
