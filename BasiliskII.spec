@@ -48,6 +48,11 @@ License:		GPLv2+
 URL:			https://www.gibix.net/projects/basilisk2/
 Group:			Emulators
 BuildRoot:		%{_tmppath}/%{name}-%{version}-buildroot
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:		gcc-c++
 BuildRequires:		esound-devel libgtk+2.0-devel
 Obsoletes:		BasiliskII-jit
